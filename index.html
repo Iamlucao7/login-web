@@ -16,30 +16,79 @@
         <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
           Usuário
         </label>
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Usuário">
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Usuário" required>
       </div>
       <div class="mb-6">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
           Senha
         </label>
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="********">
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="********" required>
       </div>
-      <div class="flex items-center justify-between">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="login()">
+      <div class="flex flex-col items-center">
+        <!-- Botão Entrar -->
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4" 
+        type="button" 
+        onclick="login()">
           Entrar
+        </button>
+        <!-- Botão Registre-se -->
+        <button class="text-sm text-blue-500 hover:text-blue-700 font-bold" type="button" onclick="mostrar_tela_registro()">
+          Registre-se
         </button>
       </div>
     </form>
   </div>
 
-  <!-- Tela de Bem-vindo -->
+  <!-- Tela de Registro (inicialmente oculta) -->
+  <div id="register-screen" class="hidden w-full max-w-xs">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h2 class="text-2xl font-bold text-center mb-6">Registre-se</h2>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="new-username">
+          Usuário
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="new-username" type="text" placeholder="Usuário" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="nome-completo">
+          Nome Completo
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome-completo" type="text" placeholder="Nome Completo" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+          Email
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" required>
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="new-password">
+          Senha
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="new-password" type="password" placeholder="********" required>
+      </div>
+      <div class="flex flex-col items-center">
+        <!-- Botão Registrar -->
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4" type="button" onclick="registrar()">
+          Registrar
+        </button>
+        <!-- Voltar para Login -->
+        <button class="text-sm text-blue-500 hover:text-blue-700 font-bold" type="button" onclick="mostrar_tela_login()">
+          Voltar
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Tela de Bem-vindo (inicia oculta) -->
   <div id="welcome-screen" class="hidden text-center">
-    <h2 class="text-4xl font-bold mb-4">Bem-vindo!</h2>
-    <p class="text-lg mb-6">Você fez login com sucesso.</p>
+    <h2 class="text-4xl font-bold mb-4">Bem-vindo<span id="welcome-username"></span>!</h2>
+    <p class="text-lg mb-6">login efetuado com sucesso.</p>
     <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onclick="logout()">
       Sair
     </button>
   </div>
- <script src="./js/app.js"></script>
+
+  <script src="./js/app.js"></script>
 </body>
 </html>
