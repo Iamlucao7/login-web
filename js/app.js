@@ -1,16 +1,16 @@
 function mostrar_tela_registro() {
-  // Esconder tela de login
+  // Escondendo tela de login
   document.getElementById('login-screen').classList.add('hidden');
   
-  // Mostra tela de registro
+  // Mostrando a tela de registro
   document.getElementById('register-screen').classList.remove('hidden');
 }
 
 function mostrar_tela_login() {
-  // Mostrar tela de login
+  // Mostrando tela de login
   document.getElementById('login-screen').classList.remove('hidden');
   
-  // Esconder tela de registro
+  // Escondendo tela de registro
   document.getElementById('register-screen').classList.add('hidden');
 
   // Limpar campos do formulário de registro
@@ -33,7 +33,7 @@ function registrar() {
   }
 
   // Faz a requisição ao servidor Flask para registrar o usuário
-  fetch('http://localhost:5000/registro', {
+  fetch('https://loginweb.vercel.app/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

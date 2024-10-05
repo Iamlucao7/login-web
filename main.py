@@ -3,7 +3,7 @@ from flask_cors import CORS
 import mysql.connector
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 def conectar_banco():
     return mysql.connector.connect(
