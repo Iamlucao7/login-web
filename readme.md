@@ -75,3 +75,11 @@ Melhorar a segurança das senhas utilizando métodos de hash mais modernos como 
 
 ## Contribuições
 Sinta-se à vontade para contribuir enviando pull requests ou relatando problemas!
+
+## Créditos
+
+**Co-Criadores:**  
+- [LUCAS PACHECO](https://github.com/Iamlucao7)  
+- [YGOR VENÂNCIO](https://github.com/YgorVSPaulino)  
+
+*Ambos os criadores contribuíram igualmente para o desenvolvimento deste projeto.*
