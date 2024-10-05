@@ -33,7 +33,7 @@ function registrar() {
   }
 
   // Faz a requisição ao servidor Flask para registrar o usuário
-  fetch('https://loginweb.vercel.app/', {
+  fetch('https://loginweb.vercel.app', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ function login() {
   }
 
   // Fazer requisição para o servidor Flask
-  fetch('http://localhost:5000/login', {
+  fetch('https://loginweb.vercel.app', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
