@@ -41,7 +41,7 @@ function registrar() {
     body: JSON.stringify({
       usuario: usuario,
       nome_completo: nome_completo,
-      email: email,
+      email: email,                 
       senha: senha
     }),
   })
@@ -66,14 +66,14 @@ function login() {
   const usuario = document.getElementById('username').value;
   const senha = document.getElementById('password').value;
 
-  // Validação simples para verificar se os campos estão preenchidos
+  // Validação para verificar se os campos estão preenchidos
   if (!usuario || !senha) {
     alert('Por favor, preencha todos os campos.');
     return;
   }
 
   // Fazer requisição para o servidor Flask
-  fetch('http://localhost:5000/login', {
+  fetch('http://localhost:5000/login', { // Corrigido para o endpoint de login
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
